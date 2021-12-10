@@ -1,4 +1,4 @@
-# my-django-code
+# my-django-code for docker container
 
 Build image using given Dockerfile
 
