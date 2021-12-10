@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Magic Square</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/book_app_styles.css' %}">
+  <style>
+    .solid {outline-style: solid;
+        background-color:black;
+        color:red;
+        font-size:30px;
+        text-align:center;
+    }
+    body {background-color: silver;
+        font-family: verdana;
+        color:blue;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="mid">
+<h2><center>Magic Square {{number}} * {{number}}</center></h2>
+<style>
+table {border: 2px solid blue; border-collapse: collapse;}
+td {border: 3px solid red;text-align: center;padding:4px;}
+
+</style>
+<table align=center>
+{% for i in x %}
+        <tr>
+        {% for z in i %}
+                <td>{{ z }}</td>
+        {% endfor %}
+        </tr>
+{% endfor %}
+</table>
+<h2><center>The total across any row and column including main diagonal is same and it is {{sum}}</center></h2>
+
+<br><br><br>
+</div>
+<center>
+    <h><a href="puzzle">Play Magic Square again</a></h><br><br>
+    <h><a href="/">Home</a></center></h>
+</center>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>Tamobla Game</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ -->  <h1><center>Welcome to the game of Tambola</center></h1>
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/book_app_styles.css' %}">
+  .solid {outline-style: solid;
+    background-color:black;
+    color:red;
+    font-size:25px;
+    text-align:center;
+}
+body {background-color: silver;
+    font-family: verdana;
+    color:blue;
+    font-size:15px;
+    font-weight:bold;
+    }
+</head>
+<body>
+
+<div class="mid">
+
+
+<br><br><br>
+<div class="bold">
+<a href="{% url 'tambola'%}"> <b><center>Start The Game again</center></b></a> <br>
+</div>
+</div>
+<footer>
+
+</footer>
+<br>
+<br>
+<center>
+  <h><a href="/">Home</a></center></h>
+</center>
+</body>
+</html>

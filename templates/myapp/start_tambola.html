@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>Tamobla Game</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/tambola_styles.css' %}">
+
+</head>
+<body>
+
+<style>
+table {border: 2px solid blue; border-collapse: collapse;}
+td {border: 2px solid gray;text-align: center;padding:1px;font-size:170%}
+</style>
+<h1><center>Tambola</center></h1>
+<table align=center>
+    <tr>
+{% for x in L %}
+    <tr>
+{% for i, k in x.items %}
+        {% if k %}
+
+        <td style="color:#FFFFFF;background-color:red;">{{ i }}</td>
+
+        {% else %}
+                <td style="color:#FFFFFF;background-color:yellow;">{{ i }}</td>
+    {% endif %}
+
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+<br>
+<div class="bold">
+<center>
+<h2>Last Number: {{last_number}} <br></h2>
+<h2 style="color:blue;"> {{cap}} </h2>
+</center>
+</div>
+<div class="bold">
+<center>
+    <a href="{% url 'start_tambola' str1=string %}"> <b>Generate Number</b></a> <br>
+
+    </center>
+</div>
+</div>
+<footer>
+
+</footer>
+<br><br><br>
+<center>
+    <h><a href="/">Home</a></center></h>
+</center>
+</body>
