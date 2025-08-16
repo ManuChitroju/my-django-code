@@ -38,7 +38,7 @@ jobs:
       #     name: python-app
       #     path: |
       #       . 
-            !venv/
+      #      !venv/
 
   # deploy:
   #   runs-on: ubuntu-latest
@@ -61,3 +61,4 @@ jobs:
   #         app-name: 'new1234'
   #         slot-name: 'Production'
   #         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1B63CE258AA945B482297E626D1EF5D1 }}
+
