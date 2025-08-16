@@ -17,15 +17,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Python version
-        uses: actions/setup-python@v1
-        with:
-          python-version: '3.8'
+      # - name: Set up Python version
+      #   uses: actions/setup-python@v1
+      #   with:
+      #     python-version: '3.8'
 
-      - name: Create and start virtual environment
-        run: |
-          python -m venv venv
-          source venv/bin/activate
+      # - name: Create and start virtual environment
+      #   run: |
+      #     python -m venv venv
+      #     source venv/bin/activate
       
       # - name: Install dependencies
       #   run: pip install -r requirements.txt
@@ -61,4 +61,5 @@ jobs:
   #         app-name: 'new1234'
   #         slot-name: 'Production'
   #         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1B63CE258AA945B482297E626D1EF5D1 }}
+
 
