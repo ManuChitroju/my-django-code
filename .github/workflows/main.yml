@@ -6,3 +6,5 @@ jobs:
     steps:
     - name: firststep
       run: echo hello
+    - name: Variable value
+      run: echo ${{vars.version}}
