@@ -18,7 +18,7 @@ jobs:
          name: text-artifact
          path: text.txt
     - name: secret value
-      run: echo ${{secrets.image_name}} > secret.txt
+      run: echo ${{secret.image_name}} > secret.txt
     - name: upload secret file
       uses: actions/upload-artifact@v4.6.2
       with:
