@@ -8,10 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      result: ${{ steps.set-var.outputs.result }}
+      result: ${{ steps.set_var.outputs.result }}  # ✅ fixed to match the step ID
     steps:
       - name: Set output variable
-        id: set-var
+        id: set_var                               # ✅ must match output reference
         run: echo "result=Hello World" >> $GITHUB_OUTPUT
 
   deploy:
