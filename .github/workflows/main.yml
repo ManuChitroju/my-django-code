@@ -6,6 +6,8 @@ jobs:
     steps:
     - name: firststep
       run: echo hello
+    - name: Checkout
+      uses: actions/checkout@v5.0.0
     - name: Variable value
       run: echo ${{vars.version}}
     - name: secret value
