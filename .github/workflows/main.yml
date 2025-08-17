@@ -9,7 +9,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v5.0.0
     - name: Variable value
-      run: echo ${{vars.version}}
+      run: echo ${{vars.version}} > text.txt
     - name: secret value
       run: echo ${{secrets.image_name}}
     - name: command
