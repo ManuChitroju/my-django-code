@@ -49,13 +49,15 @@ jobs:
       with:
          name: python-app
          path: .
-          
+    - run: pwd
+    - run: ls -ltr
     - name: 'Run Azure webapp deploy action using publish profile credentials'
       uses: azure/webapps-deploy@v2
       with: 
         app-name: new123424
         publish-profile: ${{ secrets.publish_profile }}
         package: .
+
 
 
 
