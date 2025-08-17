@@ -10,3 +10,13 @@ jobs:
       run: echo ${{vars.version}}
     - name: secret value
       run: echo ${{secrets.image_name}}
+    - name: command
+      run: pwd
+    - name: command2
+      run: ls -ltr
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.6.2
+      with:
+         name: artifact
+         path: .
+      
