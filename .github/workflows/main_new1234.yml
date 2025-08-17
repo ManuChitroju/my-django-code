@@ -55,8 +55,8 @@ jobs:
       id: deploy-to-webapp
       with:
          app-name: 'new1234'
-         slot-name: 'Production'
          publish-profile: ${{ secrets.publish_profile }}
+
 
 
 
