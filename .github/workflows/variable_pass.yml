@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      run: echo "hello"
+    - run: echo "hello"
   #   outputs:
   #     result: ${{ steps.set-var.outputs.result }}
   #   steps:
