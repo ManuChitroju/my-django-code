@@ -9,7 +9,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v5.0.0
     - name: Variable value
-      run: echo ${{vars.version}} > text.txt
+      run: |
+        echo ${{vars.version}} > text.txt
+        
+    - name: update text file
+      uses: actions/upload-artifact@v4.6.2
+      with:
+         name: text-artifact
+         path: /home/runner/work/my-django-code/text.txt
     - name: secret value
       run: echo ${{secrets.image_name}}
     - name: command
@@ -21,4 +28,4 @@ jobs:
       with:
          name: artifact
          path: /home/runner/work/my-django-code
-      
+
