@@ -8,3 +8,5 @@ jobs:
       run: echo hello
     - name: Variable value
       run: echo ${{vars.version}}
+    - name: Variable value
+      run: echo ${{secrets.image_name}}
