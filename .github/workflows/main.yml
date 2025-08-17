@@ -12,13 +12,18 @@ jobs:
       run: |
         echo ${{vars.version}} > text.txt
         
-    - name: update text file
+    - name: upload text file
       uses: actions/upload-artifact@v4.6.2
       with:
          name: text-artifact
          path: text.txt
     - name: secret value
-      run: echo ${{secrets.image_name}}
+      run: echo ${{secrets.image_name}} > secret.txt
+    - name: upload secret file
+      uses: actions/upload-artifact@v4.6.2
+      with:
+         name: secret-artifact
+         path: secret.txt
     - name: command
       run: pwd
     - name: command2
