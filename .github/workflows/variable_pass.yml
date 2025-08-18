@@ -21,4 +21,4 @@ jobs:
     needs: build
     steps:
       - name: Print the output from build job
-        run: echo "var=${{needs.build.outputs.result}}"
+        run: echo "${{needs.build.outputs.result}}"
