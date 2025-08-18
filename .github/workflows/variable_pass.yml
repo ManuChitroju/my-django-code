@@ -13,6 +13,8 @@ jobs:
       - name: Set output variable
         id: set_var                               # ✅ must match output reference
         run: echo "result=Hello World" >> $GITHUB_OUTPUT
+      - name: print value
+        run: echo ${{ steps.set_var.outputs.result }}
 
   # deploy:
   #   runs-on: ubuntu-latest
