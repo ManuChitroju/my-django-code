@@ -16,8 +16,6 @@ jobs:
         run: echo "result2=Hello World" >> $GITHUB_OUTPUT
       - name: print value
         run: echo ${{ steps.set_var.outputs.result2 }}
-      - name: print value with job
-        run: echo ${{ build.outputs.res }}
 
   deploy:
     runs-on: ubuntu-latest
