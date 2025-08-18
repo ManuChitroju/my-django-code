@@ -17,7 +17,7 @@ jobs:
       - name: print value
         run: echo ${{ steps.set_var.outputs.result2 }}
       - name: print value within steps
-        run: echo ${{ result2 }}
+        run: echo $result2
 
   deploy:
     runs-on: ubuntu-latest
