@@ -8,17 +8,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      result2: ${{ steps.set_var.outputs.result }}  # ✅ fixed to match the step ID
+      result: ${{ steps.set_var.outputs.result }}  # ✅ fixed to match the step ID
     steps:
       - name: Set output variable
         id: set_var                               # ✅ must match output reference
-        run: echo "result2=Hello World" >> $GITHUB_OUTPUT
+        run: echo "result=Hello World" >> $GITHUB_OUTPUT
       - name: print value
-        run: echo ${{ steps.set_var.outputs.result2 }}
+        run: echo ${{ steps.set_var.outputs.result }}
 
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #     - name: Print the output from build job
-  #       run: echo "Output from build: ${{ needs.build.outputs.result2 }}"
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Print the output from build job
+        run: echo "var=${{needs.build.outputs.result}}"
