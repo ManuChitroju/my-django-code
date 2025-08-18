@@ -14,9 +14,9 @@ jobs:
         id: set_var                               # ✅ must match output reference
         run: echo "result=Hello World" >> $GITHUB_OUTPUT
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Print the output from build job
-        run: echo "Output from build: ${{ needs.build.outputs.result }}"
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: Print the output from build job
+  #       run: echo "Output from build: ${{ needs.build.outputs.result }}"
