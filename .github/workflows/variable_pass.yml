@@ -16,9 +16,9 @@ jobs:
       - name: print value
         run: echo ${{ steps.set_var.outputs.result }}
 
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #     - name: Print the output from build job
-  #       run: echo "Output from build: ${{ needs.build.outputs.result }}"
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Print the output from build job
+        run: echo Output from build: ${{ needs.build.outputs.result }}
