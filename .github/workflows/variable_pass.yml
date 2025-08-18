@@ -9,13 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      result: ${{ steps.set_var.outputs.result2 }}  # ✅ fixed to match the step ID
+      res: ${{ steps.set_var.outputs.result2 }}  # ✅ fixed to match the step ID
     steps:
       - name: Set output variable
         id: set_var                               # ✅ must match output reference
         run: echo "result2=Hello World" >> $GITHUB_OUTPUT
-      - run: echo $GITHUB_OUTPUT
-      - run: cat $GITHUB_OUTPUT
       - name: print value
         run: echo ${{ steps.set_var.outputs.result2 }}
 
@@ -24,4 +22,4 @@ jobs:
     needs: build
     steps:
       - name: Print the output from build job
-        run: echo "${{ needs.build.outputs.result }}"
+        run: echo "${{ needs.build.outputs.res }}"
