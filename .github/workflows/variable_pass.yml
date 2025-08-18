@@ -15,6 +15,7 @@ jobs:
         id: set_var                               # ✅ must match output reference
         run: echo "result2=Hello World" >> $GITHUB_OUTPUT
       - run: echo $GITHUB_OUTPUT
+      - run: cat $GITHUB_OUTPUT
       - name: print value
         run: echo ${{ steps.set_var.outputs.result2 }}
 
